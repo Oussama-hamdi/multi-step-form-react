@@ -1,3 +1,128 @@
-.App {
-  text-align: center;
+.container {
+  margin: 0 auto;
+  background-color: var(--alabaster);
+  padding: 15px;
+  border-radius: var(--bRadius);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+}
+.container aside {
+  background-image: url("../public/assets/images/bg-sidebar-desktop.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: var(--bRadius);
+  padding: 20px;
+  color: white;
+  height: 440px;
+}
+.container aside ul {
+  padding: 15px;
+}
+.container aside ul .step {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  cursor: pointer;
+}
+.container aside ul .step:hover .stepNumber {
+  background-color: var(--lightBlue);
+  color: var(--marinBlue);
+  border: none;
+}
+.container aside ul .stepNumber {
+  border: 1px solid var(--white);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.container aside ul .stepNumber.active {
+  background-color: var(--lightBlue);
+  color: var(--marinBlue);
+  border: none;
+}
+.container aside ul .stepInfo {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.container aside ul .stepInfo p {
+  color: var(--coolGray);
+  margin-bottom: 3px;
+}
+
+.container .content-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .content-holder .info {
+  margin: 30px 20px;
+}
+.container .content-holder .info .info-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: var(--marinBlue);
+  letter-spacing: 1px;
+}
+.container .content-holder .info .info-paragraph {
+  color: var(--coolGray);
+  font-size: 14px;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+.container .content-holder .main-content {
+  flex: 1;
+  padding: 10px 30px 30px 20px;
+}
+.container .main-content .holder {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.container .main-content .holder label {
+  color: var(--marinBlue);
+  margin-bottom: 5px;
+}
+.container .main-content .holder input {
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid var(--coolGray);
+  outline: none;
+}
+.container .main-content .holder input:focus {
+  border-color: var(--marinBlue);
+}
+.container .buttons {
+  padding: 10px 30px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .buttons .back {
+  color: var(--coolGray);
+  background-color: var(--alabaster);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+.container .buttons .back:hover {
+  color: var(--marinBlue);
+}
+.container .buttons .next {
+  background-color: var(--marinBlue);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.container .buttons .back.not-active {
+  visibility: hidden;
 }
